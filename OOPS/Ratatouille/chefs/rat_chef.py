@@ -1,4 +1,4 @@
-from base import Chef
+from chefs.base_ import Chef
 
 class Rat_Chef(Chef):
 

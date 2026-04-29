@@ -1,5 +1,5 @@
 
-class order:
+class Order:
     def __init__(self,dish,customer):
         self.dish = dish
         self.customer = customer
