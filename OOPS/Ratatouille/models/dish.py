@@ -2,4 +2,4 @@
 class Dish:
     def __init__(self,name,price):
         self.name = name
-        self.dish = price
+        self.price = price
