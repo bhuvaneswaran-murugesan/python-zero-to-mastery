@@ -13,4 +13,4 @@ print("User balance: ",balance)
 # Product instance
 print("\n==========Product Info==========")
 product1 = Product("Football",200,10)
-print(f"Product name:{product1.name}\nPrice:{product1.price}\nQty:{product1.stock}\n")
+product1.get_stock_info()
