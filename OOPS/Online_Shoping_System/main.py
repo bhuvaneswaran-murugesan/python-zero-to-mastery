@@ -21,5 +21,7 @@ product2.get_stock_info()
 # Cart instance
 print("\n==========Cart Info==========")
 cart1 = Cart()
-cart1.add_product_to_cart("Football",20)
+cart1.add_product_to_cart("Football",2)
+
+cart1.add_product_to_cart("Shoes",2)
 cart1.get_cart_items()

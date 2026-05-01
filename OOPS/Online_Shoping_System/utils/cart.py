@@ -10,10 +10,10 @@ class Cart:
             raise ValueError("The Quantity cannot be negative value")
 
         #if product already exist in cart
-        for i,(p,q) in self.__items:
+        for i,(p,q) in enumerate(self.__items):
             if p == product:
                 self.__items[i] = (p,q + qty)
-            return
+                return
         
         #if not found, add product
         self.__items.append((product,qty))
@@ -38,6 +38,7 @@ class Cart:
         return
     
     def get_cart_items(self):
+        print("The Cart Items",self.__items)
         for i,(p,q) in enumerate(self.__items):
             print(f"The Cart Items\nProduct Name: {p}\nProduct Quantity: {q}\n")
         return
