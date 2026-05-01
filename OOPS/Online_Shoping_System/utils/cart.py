@@ -36,4 +36,8 @@ class Cart:
                 return
         print("product not found in cart")
         return
-
+    
+    def get_cart_items(self):
+        for i,(p,q) in enumerate(self.__items):
+            print(f"The Cart Items\nProduct Name: {p}\nProduct Quantity: {q}\n")
+        return

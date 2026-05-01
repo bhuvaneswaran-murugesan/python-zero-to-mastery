@@ -10,3 +10,15 @@ class Kitchen:
         for order in self.__orders:
             chef.cook(order.dish)
             order.status = "Completed"
+            
+"""
+{
+    order:
+        Dish:{
+            "name": "Ratatouille",
+            "price": 300
+            },
+        "customer": "Bhuvanesh",
+        "status": "Pending"
+}
+"""

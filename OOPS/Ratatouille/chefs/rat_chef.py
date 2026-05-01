@@ -7,3 +7,12 @@ class Rat_Chef(Chef):
 
     def cook(self,dish):
         print(f"Remy cooks {dish.name}")
+        
+"""
+{
+Dish:{
+    "name": "Ratatouille",
+    "price": 300
+    }
+}
+"""
