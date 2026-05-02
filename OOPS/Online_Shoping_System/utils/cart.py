@@ -42,6 +42,9 @@ class Cart:
             print(f"The Cart Items\nProduct Name: {p.name}\nProduct Quantity: {q}\n")
         return
     
+    def get_cart_items_info(self):
+        return self.__items
+    
     def get_total_amount(self):
         total_amount = 0
         for i,(p,q) in enumerate(self.__items):

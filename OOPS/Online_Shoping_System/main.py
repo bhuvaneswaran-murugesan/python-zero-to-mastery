@@ -27,7 +27,7 @@ cart1.add_product_to_cart(product1,2)
 cart1.add_product_to_cart(product2,2)
 cart1.get_cart_items()
 
-print("Total Amount:", cart1.get_total_amount())
-
 #order instance
 print("\n==========Order Info==========")
+Order1 = Order(user1,cart1)
+print(Order1.getorder_info())
