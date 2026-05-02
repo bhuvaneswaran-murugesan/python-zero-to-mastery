@@ -2,6 +2,8 @@ from utils.user import User
 from utils.product import Product
 from utils.cart import Cart
 from utils.order import Order
+from payment.UPI import UPI
+from payment.Cardpayment import CardPayment
 
 # User instance
 user1 = User("bhuvi",5000)
@@ -37,3 +39,13 @@ order1.complete_order()
 
 print("==========Order Status==========")
 print(f"Order Status: {order1.get_status()}")
+
+print("\n==========Payment Info==========")
+
+upi = UPI()
+status = upi.make_payment(cart1.get_total_amount()/2)
+print(status)
+
+card = CardPayment()
+status = card.make_payment(cart1.get_total_amount()/2)
+print(status)
