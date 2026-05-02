@@ -1,6 +1,7 @@
 from utils.user import User
 from utils.product import Product
 from utils.cart import Cart
+from utils.order import Order
 
 # User instance
 user1 = User("bhuvi",5000)
@@ -21,7 +22,12 @@ product2.get_stock_info()
 # Cart instance
 print("\n==========Cart Info==========")
 cart1 = Cart()
-cart1.add_product_to_cart("Football",2)
+cart1.add_product_to_cart(product1,2)
 
-cart1.add_product_to_cart("Shoes",2)
+cart1.add_product_to_cart(product2,2)
 cart1.get_cart_items()
+
+print("Total Amount:", cart1.get_total_amount())
+
+#order instance
+print("\n==========Order Info==========")

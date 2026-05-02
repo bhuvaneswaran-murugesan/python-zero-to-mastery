@@ -11,7 +11,7 @@ class Cart:
 
         #if product already exist in cart
         for i,(p,q) in enumerate(self.__items):
-            if p == product:
+            if p == product.get_product_name():
                 self.__items[i] = (p,q + qty)
                 return
         
@@ -38,7 +38,12 @@ class Cart:
         return
     
     def get_cart_items(self):
-        print("The Cart Items",self.__items)
         for i,(p,q) in enumerate(self.__items):
-            print(f"The Cart Items\nProduct Name: {p}\nProduct Quantity: {q}\n")
+            print(f"The Cart Items\nProduct Name: {p.name}\nProduct Quantity: {q}\n")
         return
+    
+    def get_total_amount(self):
+        total_amount = 0
+        for i,(p,q) in enumerate(self.__items):
+            total_amount += p.get_price() * q
+        return total_amount
