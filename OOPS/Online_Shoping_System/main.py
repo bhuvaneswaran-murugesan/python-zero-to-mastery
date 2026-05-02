@@ -29,5 +29,11 @@ cart1.get_cart_items()
 
 #order instance
 print("\n==========Order Info==========")
-Order1 = Order(user1,cart1)
-print(Order1.getorder_info())
+order1 = Order(user1, cart1)
+
+print(order1.getorder_info())
+
+order1.complete_order()
+
+print("==========Order Status==========")
+print(f"Order Status: {order1.get_status()}")
